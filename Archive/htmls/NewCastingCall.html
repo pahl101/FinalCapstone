@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Chapman Casting Portal</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    
+        <link rel="stylesheet" href="css/styleActor.css">
+
+    
+  </head>
+
+  <body>
+  
+    <nav>
+      <ul>
+        <div class = "user" style="background-image: url('images/newUser.jpg')"></div>
+        <li>User Name</li>
+        <br>
+        <li><a href="NewCastingCall.html">+ New Casting Call</a></li> <!--Opens Create Casting Call-->
+        <li><a href="#Call1">...</a></li>
+        <li><a href="#Call2">...</a></li> 
+
+      </ul> 
+    </nav>
+        
+  <div class = "content">
+
+      <center><h1><img src="images/CHAPCAST.png" alt="Chapcast" style="width: 350px; height: 50px"></h1></center>
+
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" >Log Out</a>
+        <a href="editProfile.html" >Settings</a> <!--Opens Profile Settings Page-->
+        <a href="directorView.html" >Director</a>
+        <a href="mainPage.html" >Actor</a>
+ 
+    </div>
+
+        <center><img src="images/logo.png" alt="Chapman Logo" align="center" style="width:300px;height:50px;"></center>
+
+      <form action="index.html" method="post">
+      
+        <center><h1>Create New Casting Call</h1></center>
+        
+        <fieldset>
+          <label>Film Poster:</label>
+            <input type="file" name="filmposter" accept="image/*"><br><br><br>
+
+
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required><br><br>
+
+          <label for="description">Description:</label><br>
+          <textarea name="description" id="description" cols="80" rows="10" required></textarea><br><br>
+
+          <label for="script">Script:</label>
+          <input type="file" id="script" name="script" accept="application/pdf" required><br><br><br>
+
+          <label for="prodlevel">Level of Production:</label><br>
+          <select id="prodlevel" name="prodlevel" required>
+            <option selected disabled>Choose the Level of Production:</option>
+            <option value="interest_fp338">Undergraduate Directing 2 (FP 338)</option>
+            <option value="interest_fp438">Undergraduate Directing 3 (FP 438)</option>
+            <option value="interest_ftv130">Visual Storytelling (FTV 130)</option>
+            <option value="interest_fp280">Undergraduate Intermediate Production (FP 280)</option>
+            <option value="interest_fp331">Undergraduate Advanced Production (FP 331)</option>
+            <option value="interest_fp497-498">Undergraduate Senior Thesis (FP 497-498)</option>
+            <option value="interest_twp313">Undergraduate Byte-sized Television (TWP 313)</option>
+            <option value="interest_twp398">Undergraduate Television Pilots (TWP 398)</option>
+            <option value="interest_ugdigart">Undergraduate Digital Arts Project</option>
+            <option value="interest_ugindep">Undergraduate Independent Study</option>
+            <option value="interest_fp538">Graduate Fundamentals of Directing 1 (FP 538)</option>
+            <option value="interest_fp539">Graduate Fundamentals of Directing 2 (FP 539)</option>
+            <option value="interest_fp664">Graduate Intermediate Directing (FP 664)</option>
+            <option value="interest_fp665">Graduate Advanced Directing (FP 665)</option>
+            <option value="interest_fp638">Master class in Directing (FP 638)</option>
+            <option value="interest_fp531">Graduate Production Workshop 1 (FP 531)</option>
+            <option value="interest_fp532">Graduate Production Workshop 2 (FP 532)</option>
+            <option value="interest_fp577">Graduate Production Workshop 3 (FP 577)</option>
+            <option value="interest_fp631">Graduate Production Workshop 4 (FP 631)</option>
+            <option value="interest_fp698">Graduate Thesis (FP 698)</option>
+            <option value="interest_fp507">Graduate Filmmakers and Actors Workshop (FP 507)</option>
+            <option value="interest_gindep">Graduate Independent Study</option>
+            <option value="interest_other">Other</option>
+
+          </select><br><br>
+
+          <label for="location">Location:</label><br>
+          <input type="text" id="location" name="location" required><br><br>
+          
+          <label>Filming Dates:</label><br><br>
+
+          <label for="startdate">Start: </label>
+          <input type="date" id="startdate" name="startdate" required><br>
+          
+          <label for="finishdate">Finish:</label>
+          <input type="date" id="finishdate" name="finishdate" required><br><br>
+
+          <label for="auditionlocation">Audition Location:</label><br>
+          <input type="text" id="auditionlocation" name="auditionlocation" required><br><br>
+
+          <label>Audition Dates:</label><br><br>
+
+          <label for="auditionstartdate">Start:</label>
+          <input type="date" id="auditionstartdate" name="auditionstartdate" required><br>
+          
+          <label for="auditionfinishdate">Finish:</label>
+          <input type="date" id="auditionfinishdate" name="auditionfinishdate" required><br>
+
+          <script src="js/addInput.js" language="Javascript" type="text/javascript"></script><br><br>
+          <label>Roles:</label><br><br>
+               <div id="dynamicInput">
+                    Role 1<br><input type="text" name="myInputs[]"><br><br>
+                    Role Description <br><textarea name="roledescriptionInputs[]" id="roledescription" cols="50" rows="5"></textarea><br>
+                    Role Side <br><input type="file" name="roleInputs[]"><br><br>
+                    Role Gender<br><select id="gender" name="genderInputs[]"><br><br>
+                      <option selected disabled>Choose Role Gender:</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="ambiguous">Ambiguous</option>
+                      <option value="irrelevant">Irrelevant</option>
+                    </select><br><br>
+                    Age Range<br><select id="age" name="ageInputs[]"><br>
+                      <option selected disabled>Choose Role Age Range:</option>
+                      <option value="age_13to15">13 to 15</option>
+                      <option value="age_16to20">16 to 20</option>
+                      <option value="age_21to25">21 to 25</option>
+                      <option value="age_26to30">26 to 30</option>
+                    </select><br><br><br>
+
+               </div>
+               <input type="button" value="Add Another Role" onClick="addInput('dynamicInput');">
+               <input type="button" value="Delete Role" onClick="removeElement('dynamicInput');">
+
+               <br><br><center><button onclick="goBack()">Submit</button></center>
+        
+          </fieldset>
+        </form>
+
+
+
+    </div>
+
+
+    
+  </body>
+</html>
